@@ -1,0 +1,127 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .card {
+    display: flex;
+    width: 630px;
+    height: 430px;
+    box-shadow: 0 0px 60px hsl(221, 100%, 96%);
+    border-radius: 2rem;
+  }
+}
+.card__result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  padding: 3rem;
+  text-align: center;
+  border-radius: 0 0 2rem 2rem;
+  color: hsl(241, 100%, 89%);
+  flex-basis: 50%;
+}
+@media (min-width: 768px) {
+  .card__result {
+    border-radius: 2rem;
+  }
+}
+.card__result h3 {
+  color: hsl(241, 100%, 89%);
+}
+.card__result h5 {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+.card__result_score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1.5rem 0;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-image: linear-gradient(hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+}
+.card__result_score span {
+  font-size: 3rem;
+  color: hsl(0, 0%, 100%);
+}
+.card__summary {
+  padding: 2rem;
+  flex-basis: 50%;
+}
+.card__summary_score {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+.card__summary_score_type {
+  display: flex;
+}
+.card__summary_score_type p {
+  margin-left: 0.7rem;
+}
+.card__summary_score-evaluation {
+  color: hsl(224, 30%, 27%);
+  font-weight: 800;
+}
+.card__summary_score-evaluation span {
+  font-weight: 300;
+  color: grey;
+}
+.card__summary_button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 3rem;
+  border: none;
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 0.08rem;
+}
+.card__summary_button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.reaction {
+  background-color: hsla(0, 100%, 67%, 0.105);
+  color: hsl(0, 100%, 67%);
+}
+
+.memory {
+  background-color: hsla(39, 100%, 56%, 0.062);
+  color: hsl(39, 100%, 56%);
+}
+
+.verbal {
+  background-color: hsla(166, 100%, 37%, 0.1);
+  color: hsl(166, 100%, 37%);
+}
+
+.visual {
+  background-color: hsl(221, 100%, 96%);
+  color: hsl(234, 85%, 45%);
+}/*# sourceMappingURL=styles.css.map */

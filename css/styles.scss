@@ -1,0 +1,161 @@
+$lightRed: hsl(0, 100%, 67%);
+$orangeYellow: hsl(39, 100%, 56%);
+$greenTeal: hsl(166, 100%, 37%);
+$cobaltBlue: hsl(234, 85%, 45%);
+
+$lightRedT: hsla(0, 100%, 67%, 0.105);
+$orangeYellowT: hsla(39, 100%, 56%, 0.062);
+$greenTealT: hsla(166, 100%, 37%, 0.1);
+$cobaltBlueT: hsl(234, 85%, 45%);
+//bg
+$lightSlateBlue: hsl(252, 100%, 67%);
+$lightRoyalBlue: hsl(241, 81%, 54%);
+//circle
+$violetBlue: hsla(256, 72%, 46%, 1);
+$persianBlue: hsla(241, 72%, 46%, 0);
+$white: hsl(0, 0%, 100%);
+$paleBlue: hsl(221, 100%, 96%);
+$lightLavender: hsl(241, 100%, 89%);
+$darkGrayBlue: hsl(224, 30%, 27%);
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    font-family: 'Hanken Grotesk', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    @media (min-width:768px) {
+        display: flex;
+        width: 630px;
+        height: 430px;
+        box-shadow:0 0px 60px $paleBlue;
+        border-radius: 2rem;
+    }
+
+    &__result {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: linear-gradient($lightSlateBlue, $lightRoyalBlue);
+        padding: 3rem;
+        text-align: center;
+        border-radius: 0 0 2rem 2rem;
+        color: $lightLavender;
+        flex-basis: 50%;
+
+        @media (min-width:768px) {
+            border-radius: 2rem;
+        }
+        h3 {
+            color: $lightLavender;
+        }
+
+        h5 {
+            color: $white;
+            font-size: 1.4rem;
+            margin-bottom: .7rem;
+        }
+
+        &_score {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 1.5rem 0;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background-image: linear-gradient($violetBlue, $persianBlue);
+
+            span {
+                font-size: 3rem;
+                color: $white;
+            }
+        }
+
+
+    }
+
+    &__summary {
+        padding: 2rem;
+        flex-basis: 50%;
+
+        &_score {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: .5rem;
+
+            &_type {
+                display: flex;
+
+                p {
+                    margin-left: .7rem;
+                }
+            }
+
+            &-evaluation {
+                color: $darkGrayBlue;
+                font-weight: 800;
+
+                span {
+                    font-weight: 300;
+                    color: grey;
+                }
+            }
+        }
+
+        &_button {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 3rem;
+            border: none;
+            background-color: $darkGrayBlue;
+            color: $white;
+            letter-spacing: .08rem;
+
+            &:hover {
+                cursor: pointer;
+                background-image: linear-gradient($lightSlateBlue, $lightRoyalBlue);
+            }
+        }
+    }
+}
+
+.reaction {
+    background-color: $lightRedT;
+    color: $lightRed;
+}
+
+.memory {
+    background-color: $orangeYellowT;
+    color: $orangeYellow;
+}
+
+.verbal {
+    background-color: $greenTealT;
+    color: $greenTeal;
+}
+
+.visual {
+    background-color: $paleBlue;
+    color: $cobaltBlue;
+}
